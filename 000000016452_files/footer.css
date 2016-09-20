@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS 下段メニュー */
+
+#FT_main {
+   margin: 10px 0;
+   color: #ffffff;
+}
+#FT_main tr td p a {
+   color: #ffffff;
+}
+
+.FT_main_category_tr td {
+   vertical-align: top;
+}
+.FT_main_category_main_td {
+   text-align: right;
+}
+.FT_main_category_bottom {
+   height: 5px;
+}
+
+.FT_main_info_tr td {
+   text-align: center;
+}
+.FT_main_info_tr td p a{
+   text-decoration: none;
+}
+
+.FT_main_company_tr td {
+   text-align: center;
+}
+

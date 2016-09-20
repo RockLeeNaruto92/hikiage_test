@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*------- 初期値CSSのコメントアウト -------
+td {font-size:9pt; }
+td.line {font-size:1pt;}
+.lims {font-size:9pt;}
+.woong {font-size:9pt;}
+.woong1 {font-size:8pt;line-height:130%}
+.woong2 {font-size:15pt;line-height:130%}
+.woong3 {font-size:7pt; font-family:matchworks,tahoma;color:#444444;line-height:130%}
+.woong4 {font-size:11pt;line-height:130%}
+.line {font-size:1px;line-height:1px;}
+.input{border:solid 1;verdana;font-size:9pt;color:black;background-color:white;height:19px}
+.input2{border:solid 0;verdana;font-size:9pt;color:black;background-color:white;height:16px}
+.textarea {border:solid 1; verdana;font-size:9pt;color:black;background-color:white}
+input{font-size:9pt;}
+body {
+   font-size:9pt;
+}
+a{text-decoration:none ;}
+A:link { text-decoration:none; color:#040f6f;}
+A:visited { text-decoration:none; color:#040f6f;}
+A:hover { color:#dc143c; text-decoration:underline;}
+-----------------------------------------*/
+
+
+/*------------------- 初期化 --------------------*/
+/* Reset: margin, padding propaty */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote {
+   margin:0;
+   padding:0;
+}
+
+/* Reset: border propaty */
+abbr,acronym,fieldset,img {
+   border:0;
+}
+
+/* Reset: [table] selector */
+table {
+   border-collapse:collapse;
+   border-spacing:0;
+}
+table,th,td {
+   margin:0;
+   padding:0;
+}
+caption {
+   text-align:left;
+}
+
+/* Reset: List selector */
+ol,ul {
+   list-style:none;
+}
+/* Reset: font propaty */
+address,caption,cite,code,dfn,em,strong,th,var {
+   font-style:normal;
+   font-weight:normal;
+}
+/* Reset: other */
+q:before,q:after {
+   content:'';
+}
+
+
+/*------------------- フォントの基本設定 -------------------*/
+/* Reset: font-size, line-height propaty ブラウザのデフォルトフォントサイズを16pxと前提*/
+body {
+   font-size:75%; /* 12px */
+   line-height:1.4;
+}
+h1,h2,h3,h4,h5,h6 {
+   font-size:1.2em; /* 14px */
+   line-height:1.0;
+}
+p {
+   font-size:1.0em; /* 12px */
+   line-height:1.4;
+}
+table {
+   font-size:11px; /* 12px */
+   line-height:1.4;
+}
+
+/* Reset: font-family propaty*/
+body {
+   font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+   background: #FFFFFF;
+}
+
+body a{
+   font-family:Verdana, "’ヒラギノ角ゴ Pro W3′", "’Hiragino Kaku Gothic Pro’", osaka, "’メイリオ’", Meiryo, "’ＭＳ Ｐゴシック’",
+'MS PGothic’, sans-serif';
+}
+
+
+/*------------------- フロート操作によるボックスの高さ調整 -------------------*/
+.clearfix:after {
+   content:".";
+   display:block;
+   height:0;
+   clear:both;
+   visibility:hidden;
+}
+.clearfix {
+   display:inline-table;
+   min-height:1%;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+   height:1%;
+}
+.clearfix{
+   display:block;
+}
+
+a:hover {
+   text-decoration:none;
+}
+/* End hide from IE-Mac */
+
+
+/*------------------- コンテンツ設定 -------------------*/
+.wrapper {
+   width: 988px;
+   margin-right:auto;
+   margin-left:auto;
+}
+#contentsBg {
+   margin:0px;
+   padding:0px;
+}
+#sidemenuBg {
+   background: url(http://www.digilabshop.com/design/digitallab/sidemenu_bg.jpg) repeat-y left top;
+}
+.m_price {
+   font-size:24px;
+   color:#FF0000; 
+}
+a:hover.cartImg {
+   opacity:0.8;
+   filter:alpha(opacity=80);
+   -ms-filter: "alpha( opacity=80 )";
+}
+
+
+/*------------------- aircon -------------------*/
+table.aircon td {
+   padding: 5px;
+}
+table.aircon td.title {
+   width: 75px;
+   font-weight: bold;
+   background: #FFB468;
+   text-align: center;
+   font-size: 105%;
+   padding: 0;
+}
+table.aircon td.price {
+   text-align: right;
+}
+table.aircon td.noText {
+   padding: 0;
+   height: 2px;
+   background: #dddddd;
+}
+
+
+/*------------------- 独自ページの設定 -------------------*/
+.flets_autumn{
+   background-attachment: fixed;
+   background:url(http://gigaplus.makeshop.jp/digitallab/images/flets_autumn_left.png);
+   background-repeat: repeat-y;
+   background-position: 200px 0px;
+   position: relative;
+   left: 0px;
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   margin: 0px;
+   visibility: visible;
+}
+
+
+/*------------------- 左メニューの設定 -------------------*/
+.image_left00{
+   float:left;
+}
+.image_right00{
+   float:left;
+   width:90px;
+}
+.serch_image{
+   margin:5px 0 0 0;
+}
+.flets_autumn{
+   background-attachment: fixed;
+   background:url(http://gigaplus.makeshop.jp/digitallab/images/flets_autumn_left.png);
+   background-repeat: repeat-y;
+   background-position: 200px 0px;
+   position: relative;
+   left: 0px;
+   top: 0px;
+   right: 0px;
+   bottom: 0px;
+   margin: 0px;
+   visibility: visible;
+}
+
+
+/* ------------------- メイン中央の設定 -------------------*/
+.image_top{
+   margin:20px 0 0 0;
+}
+.image_bottom{
+   margin:0 0 20px 0;
+}
+h3.test000{
+   margin:5px 0;
+}
+.image_top_left{
+   text-align:right;
+}
+
+/*------------------- ランキングの設定 -------------------*/
+.M_rankingBox .midImg{
+   background:#eee;
+   width:160px;
+   margin-left:20px;
+   margin-bottom:10px;
+   border:2px solid #bbb;
+   border-radius: 10px;        /* CSS3草案 */  
+   -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */ 
+   -moz-border-radius: 10px;   /* Firefox用 */
+   behavior: url(border-radius.htc);//for IE
+}
+
+/*------------------- ページ全体の幅(ヘッダは除く) -------------------*/
+table#makebanner {
+   width:1000px !important;
+}
+
+/*------------------- ヘッダー幅 -------------------*/
+#Header_Contents {
+   width: 1000px;
+}
+
+/*------------------- メイン左側幅 -------------------*/
+#Left_Contents {
+   width: 200px;
+   margin-bottom: 20px;
+}
+
+/*------------------- メイン側幅 -------------------*/
+#Right_Contents {
+   width: 800px;
+   margin-bottom: 20px;
+}
+/*------------------- フッター幅 -------------------*/
+#footer_Contents {
+   width: 1000px;
+   background: #333333;
+}

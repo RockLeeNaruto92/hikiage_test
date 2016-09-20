@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS 商品詳細ページ */
+
+.SD_InfoAnchor_a {
+   margin-right: -2px;
+}
+
+/* 商品詳細_パンくず＋商品名 */
+#SD_title {
+   width: 780px;
+   margin-bottom: 5px;
+}
+
+/* 商品詳細_MAIN */
+#SD_main {
+   width: 780px;
+   margin-bottom: 10px;
+}
+#SD_main tr td {
+   vertical-align: top;
+}
+
+/* 商品詳細のMAIN内_左側 */
+#SD_main_left {
+   width: 220px;
+}
+#SD_main_left tr td {
+   vertical-align: top;
+}
+
+/* 商品詳細のMAIN内_左側と右側の間 */
+#SD_main_between_td {
+   width: 10px;
+}
+
+/* 商品詳細のMAIN内_右側(上) */
+#SD_main_right_ue {
+   width: 550px;
+   margin-bottom: 10px;
+}
+#SD_main_right_ue tr td {
+   text-align: left;
+}
+
+/* 商品詳細のMAIN内_右側(下) */
+#SD_main_right_sita {
+   width: 550px;
+}
+#SD_main_right_sita tr td {
+}
+
+/* 商品詳細の送料表 */
+#SD_postage_delivery {
+   width: 780px;
+   margin-bottom: 20px;
+}
+
+/* 商品詳細のインフォメーション */
+#SD_info {
+   width: 780px;
+}
+#SD_info_left_td {
+   width: 380px;
+   vertical-align: top;
+}
+#SD_info_between_td {
+   width: 20px;
+}
+#SD_info_right_td {
+   width: 380px;
+   vertical-align: top;
+}
+
+/* 「お支払い方法について」などの下マージン */
+.SD_tr_space_1 {
+   height: 5px;
+}
+/* 各項目終了時の下マージン */
+.SD_tr_space_2 {
+   height: 13px;
+}
+/* その他マージン */
+.SD_tr_space_3 {
+   height: 5px;
+}
+
+.SD_deli_time_td_1 {
+   height: 23px;
+   width: 150px;
+}
+.SD_deli_time_td_2 {
+   padding-right: 8px;
+   width: 180px;
+}
+
+/* 上へ戻る */
+#SD_bottom {
+   width: 780px;
+}
+
+/* エアコン_取付工事 */
+#SD_aircon {
+   width: 705px;
+   margin-bottom: 10px;
+}
+#SD_aircon_add_table {
+   width: 705px;
+   font-family: 'メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+/* イーモバイル */
+#SD_emobile {
+   width: 705px;
+   margin-bottom: 10px;
+}
+.SD_emobile_text_div {
+   width: 700px;
+   margin: 0 auto;
+}
+.SD_emobile_text_div_1 p {
+   background-color: #ffffe0;
+}
+.SD_emobile_text_div_1 p {
+   padding-left: 2em;
+}
+
+/* 光フレッツ */
+#SD_flets {
+   width: 705px;
+}
+.SD_flets_QA_table {
+   width: 705px;
+   border:1px solid #222222;
+   margin-bottom: 10px;
+}
+
+.SD_flets_Q_tr {
+   background-color: #ededed;
+}
+.SD_flets_Q_td_1 {
+   width: 40px;
+   text-align: center;
+   vertical-align: middle;
+   padding: 10px;
+   color:#ff8a00;
+   font-weight:bold;
+}
+.SD_flets_Q_td_2 {
+   text-align: left;
+   vertical-align: middle;
+   padding: 10px;
+   color:#333333;
+   font-weight:bold;
+}
+.SD_flets_A_tr {
+}
+.SD_flets_A_td_1 {
+   text-align: center;
+   vertical-align:top;
+   padding: 10px;
+   color:#029cc8;
+   font-weight:bold;
+}
+.SD_flets_A_td_2 {
+   text-align: left;
+   vertical-align: middle;
+   padding: 10px;
+}
+
+.SD_flets_cashbackflow_table {
+   width: 705px;
+}
+.SD_flets_cashbackflow_td_1 {
+   width: 150px;
+}
+.SD_flets_cashbackflow_td_2 {
+   width: 10px;
+}
+.SD_flets_cashbackflow_td_3 {
+   border: #666666 solid 2px;
+}
+
+/* 松風(まつかぜ) */
+#SD_matsukaze {
+   width: 705px;
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript; charset=utf-8">
+<meta http-equiv="content-style-type" content="text/css">
+    <meta name="keywords" content="temona｜ショッピングカート">
+    <meta name="description" content="temona｜ショッピングカート">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <title>買い物カゴ</title>
+    <link rev="made" href="http://tamago.temonalab.com">
+    <link rel="index" href="http://tamago.temonalab.com">
+    <link href="/stylesheets/import_plus.css?1462530270" media="screen" rel="stylesheet" type="text/css">
+
+
+      <link href="/stylesheets/plus-cart/FG/color.css?1462530270" media="screen" rel="stylesheet" type="text/css">
+
+
+
+    <link href="/stylesheets/devel.css?1462530270" media="screen" rel="stylesheet" type="text/css">
+
+
+    <script src="/javascripts/prototype.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/maintenance.js?1462530270" type="text/javascript"></script>
+
+
+    <script src="/javascripts/scriptaculous.js?1462530270" type="text/javascript"></script><script type="text/javascript" src="http://general-test.temonalab.com/javascripts/builder.js"></script><script type="text/javascript" src="http://general-test.temonalab.com/javascripts/effects.js"></script><script type="text/javascript" src="http://general-test.temonalab.com/javascripts/dragdrop.js"></script><script type="text/javascript" src="http://general-test.temonalab.com/javascripts/controls.js"></script><script type="text/javascript" src="http://general-test.temonalab.com/javascripts/slider.js"></script><script type="text/javascript" src="http://general-test.temonalab.com/javascripts/sound.js"></script>
+<script src="/javascripts/builder.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/external.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/heightLine.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/scrooll.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/backnumber.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/news.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/popup.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/yasuyuki.js?1462530270" type="text/javascript"></script>
+
+    <script src="/javascripts/../plus/javascripts/changevisibility.js?1448431334" type="text/javascript"></script>
+
+
+
+
+
+
+  <style type="text/css">
+/**wrapper**/
+#head_wrapper {
+	width: 800px;
+	margin: 0 auto;
+}
+
+/*------------   end head style   ------------*/
+
+
+
+/*------------   start foot style   ------------*/
+
+/**wrapper & copyright**/
+#foot_wrapper {
+	width: 800px;
+	margin: 0 auto 40px auto;
+}
+
+#foot {
+	margin: 20px 0;
+	overflow: hidden;
+	padding-bottom: 40px;
+}
+
+#foot p.copy {
+	font-weight: bold;
+	float: left;
+	font-size: 11px;
+}
+
+#foot p.powerd { float: right; }
+
+
+
+/**information area**/
+
+#usr_footer { background: #CCC; }
+
+#usr_footer a {
+	color: #0000ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#usr_footer a:hover { color: #F60; }
+
+#usr_footer a img { border-bottom: none; }
+
+#usr_footer table td {
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+#usr_footer table p { margin: 10px; }
+
+#usr_footer strong {
+	font-weight: bold;
+	color: #C70000;
+	line-height: 20px;
+}
+
+#usr_footer .right { text-align: right; }
+
+</style></head>
+
+
+
+
+<!--user stylesheets-->
+
+
+
+<!--user stylesheets-->
+
+    <h1><a href="data_tag.html">Link to data tag</a></h1>
+
+    <body style="background-image: url(/plus/images/admin/common/bg_front.gif);background-repeat: no-repeat;background-position: center;">
+
+    <div id="wrapper">
+      <div id="head_wrapper">
+        <!--ヘッダ編集可能領域ここから-->
+
+
+        <script type="text/javascript">
+          window.haAsyncInit = function() {
+            HA.init({
+              com_uuid: "1b4ca8d6f6ae9e02c26d08cddb7bce39",
+              customer_code: "",
+              class_name: "",
+              class_item_unit: "",
+              tag: "cart",
+              x_storage: true
+            });
+          };
+
+          document.onreadystatechange = function(){
+            (function(d, s, id) {
+              var js, hjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id) || document.readyState != "complete") {
+                return;
+              };
+              js = d.createElement(s);
+              js.async = true;
+              js.id = id;
+              js.src = "http://192.168.1.10:3000/hikiageru-sdk.min.js";
+              hjs.parentNode.insertBefore(js, hjs);
+            })(document, "script", "hikiageru-sdk");
+          };
+        </script>
+
+<!--ヘッダ編集可能領域ここから-->
+    <div id="head">
+      <h1 class="def"></h1>
+      <div id="head_def_navi">
+        <ul>
+          <li style="width:800px;">
+
+
+ここにロゴを貼付けてください。
+
+
+<!--ここからロゴのHTMLタグ-->
+
+
+            <a href="http://">
+             <img align="left" alt="" border="0" src="/images/">
+            </a>
+
+
+<!--ここまで-->
+<!--タグ設定後、上の「ここにロゴを貼付けてください。」を抹消してください。-->
+
+
+          </li>
+        </ul>
+        <ul>
+          <li><a href="http://" class="navi1"><span class="none">HOME</span></a></li>
+          <li><a href="http://" class="navi2"><span class="none">商品一覧</span></a></li>
+          <li><a href="/shop/display_cart" class="navi3"><span class="none">カートの中身</span></a></li>
+          <li><a href="/account/my_page_login" class="navi4"><span class="none">マイアカウント</span></a></li>
+          <li><a href="/contact/index" class="navi5"><span class="none">お問い合わせ</span></a></li>
+          <li><a href="" class="navi6"><span class="none">ショッピングガイド</span></a></li>
+        </ul>
+      </div>
+    </div>
+<script>
+ console.log("============Page load============")
+</script>
+<!--ヘッダ編集可能領域ここまで-->
+
+
+
+
+
+
+        <!--ヘッダ編集可能領域ここまで-->
+
+        <!--各画面が読み込まれるエリア-->
+        <div id="body_wrapper">
+    <div id="body_title">
+
+
+
+        <h2>
+            <img alt="Cart_title01" src="/shop_data/cart_title01.gif?1462530270"></h2>
+        <img alt="Cart_navi01" src="/shop_data/cart_navi01.gif?1462530270"></div>
+
+
+
+
+
+
+
+
+
+<form action="/order/check_login_no_ssl" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="7b920fc3d5c76c9b186060439eaab0aeff074a6e"></div>
+  <div id="cart_body">
+
+        <div class="mgnB40" id="cart">
+
+
+              <div id="item_detail">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="preview">
+    <tbody><tr>
+        <td colspan="5" class="hr"></td>
+    </tr>
+
+  <tr>
+      <th class="cart01 ttl" style="width:250px;"><p class="cart_ttl1"><span class="none">カートに入っている商品</span></p></th>
+  <th class="cart01" style="width:190px;"><p class="cart_ttl2"><span class="none">単価</span></p></th>
+  <th class="cart01"><p class="cart_ttl3"><span class="none">注文数</span></p></th>
+  <th class="cart01" style="width:70px;"><p class="cart_ttl4"><span class="none">小計</span></p></th>
+  <th class="cart01 del"><p class="cart_ttl5"><span class="none">削除</span></p></th>
+  </tr>
+
+<tr>
+    <td colspan="5" class="hr"></td>
+</tr>
+
+
+  <!--item loop start-->
+  <tr>
+      <td class="ttl">5401円</td>
+
+        <td class="alignR">5,400円
+            (税込5,832円)
+        </td>
+
+
+        <td id="select_order_qty_0" style="border: none;width: 38px;text-align: right;" rowspan="2">
+
+
+            <select id="order_order_qty_0" name="order_0" onchange="new Ajax.Request('/shop/total_price_cal?item_id=5&amp;item_kind=order&amp;order_qty=3&amp;return_url=', {asynchronous:true, evalScripts:true, parameters:Form.serialize('body_wrapper') + '&amp;authenticity_token=' + encodeURIComponent('7b920fc3d5c76c9b186060439eaab0aeff074a6e')});
+        for (var i = 0; i &lt; 1; i++)
+        {
+        getElementById('order_order_qty_'+i).disabled=true;
+        getElementById('periodically_order_order_qty_'+i).disabled=true;
+        }" style="width:50px"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3" selected="selected">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option></select>
+        </td>
+
+      <td class="alignR">
+
+            17,496円
+
+
+      </td>
+      <td class="del">
+          <a href="/shop/delete_item?classification=order&amp;code=5401yen&amp;delete_idx=0&amp;return_url="><img alt="削除" src="/shop_data/cart_btn_del.gif?1462530270"></a>
+      </td>
+  </tr>
+
+
+
+
+
+
+
+
+  <tr>
+      <td colspan="5" class="hr"></td>
+  </tr>
+  <!--item loop end-->
+
+
+  </tbody></table>
+  <p class="total">合計金額：<span class="rd">17,496円</span></p>
+
+    <p class="total pdnL10" style="font-size:15px">内消費税等：1,296円</p>
+
+
+              </div>
+
+                <p class="total" style="margin-top:10px; text-align: center;">
+                    <b style="font-size:21px;">
+
+                    </b>
+                </p>
+
+
+
+
+            <div id="gift">
+
+  <div id="gift">
+
+
+
+
+
+          <br>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0" class="preview">
+              <tbody><tr>
+                  <td colspan="5" class="hr"></td>
+              </tr>
+              <tr>
+                  <th class="cart01 ttl">
+                      熨斗のご指定
+                  </th>
+                  <th class="cart01 ttl" colspan="4">
+
+                        <select id="gift_id" name="gift[id]" onchange="new Ajax.Request('/shop/change_gift', {asynchronous:true, evalScripts:true, parameters:Form.serialize('gift') + '&amp;authenticity_token=' + encodeURIComponent('7b920fc3d5c76c9b186060439eaab0aeff074a6e')}); getElementById('gift_id').disabled=true;Element.hide('hide_cart_btn');"><option value="">お選びください</option>
+<option value="1">熨斗</option></select>
+
+                  </th>
+              </tr>
+              <tr>
+                  <td colspan="5" class="hr"></td>
+              </tr>
+          </tbody></table>
+          <div id="details">
+
+
+
+
+          </div>
+
+
+  </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+      <!--カート内リコメンドエリアここから-->
+
+
+
+
+
+      <!--カート内リコメンドエリアここまで-->
+
+
+        <div id="cart_submit">
+                    <p class="alignC mgnT5" id="hide_cart_btn">
+          <span id="hide_display">
+           <input alt="ご注文手続きへ進む" id="hide_display" onclick="Element.setStyle('hide_display','visibility: hidden;display:none;');Element.setStyle('appear_display','visibility:visible;display:block;')" src="/shop_data/cart_btn_order.gif?1462530270" type="image">
+          </span>
+          <span id="appear_display" style="visibility: hidden;display:none;">
+          <img align="center" alt="Loading" height="22" src="/images/../images/loading.gif?1462530270" style="margin-right:1px;vertical-align:bottom;" width="22">
+              お待ち下さい
+          </span>
+        </p>
+
+
+        </div>
+
+  </div>
+    <div id="pageback">
+      <a href=""><img alt="＜商品ページへ戻る" src="/shop_data/cart_btn_back01.gif?1462530270"></a>
+      <a href="http://general-test.temonalab.com"><img alt="＜お店のトップへ戻る" src="/shop_data/cart_btn_back02.gif?1462530270"></a>
+
+  </div>
+</form>
+</div>
+
+<!--end cart area-->
+<input id="return_url" name="return_url" type="hidden" value="">
+
+
+
+        <!--フッタカスタマイズ領域ここから-->
+
+
+    <div id="foot">
+<!--デフォルトナビゲーションここから-->
+      <div id="footer_def_navi">
+        <div id="footer_def_navi_txt">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td align="center"><table border="0" cellpadding="0" cellspacing="0" class="footmenu">
+                <tbody><tr>
+                  <td><a href="">ショッピングガイド</a></td>
+                  <td><a href="">プライバシーポリシー</a></td>
+                  <td><a href="/contact/index">お問い合わせ</a></td>
+                  <td><a href="">会社概要</a></td>
+                </tr>
+              </tbody></table></td>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+
+<!--デフォルトナビゲーションここまで-->
+      <p class="copy">Copyright ©  All rights reserved.</p>
+      <p class="powerd">
+            <a href="http://tamago.temonalab.com/" target="_blank"><img src="/shop_data/powerdby.gif" alt="Powed by たまごリピート" width="213" height="31"></a></p>
+    </div>
+
+<!--フッタカスタマイズ領域ここまで-->
+
+        <!--フッタカスタマイズ領域ここまで-->
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- sample order tags -->
+
+
+
+
+
+
+
+
+
+
+
+
+      <script type="text/javascript">
+        var eggcartjs=document.createElement('script');
+        var eggcartDomain=document.location.protocol+"//"+"general-test.temonalab.com"+"/one_tag/get_tags";
+        var eggcartHost=eggcartDomain+(document.location.protocol=="https:" ? "_ssl/" : "/");
+        eggcartjs.src=eggcartHost + "001111";
+        var eggcarthead=document.getElementsByTagName('body')[0];
+        eggcarthead.appendChild(eggcartjs);
+      </script><script src="http://general-test.temonalab.com/one_tag/get_tags/001111"></script>
+
+
+
+
+
+<script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{(function() { for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i.toString(); } else { d.textContent=i.toString(); } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }})()}catch(e){}</script><div id="ads"></div></body></html>

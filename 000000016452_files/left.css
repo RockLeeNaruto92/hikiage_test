@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+
+img {
+   border: 0;
+}
+
+ul li {
+   margin: 0;
+   padding: 0;
+}
+
+.Left_Menu {
+   width: 200px;
+   background-color: #333333;
+}
+.Left_Menu > li {
+   height: 50px;
+   text-align: center;
+   position: relative;
+}
+
+.Left_Menu_Sub {
+   display: none;
+   top: 0;
+   left: 198px;
+   font-weight: bold;
+   position: absolute;
+   background: #ffffff;        /* プルダウン背景 */
+   border: solid 1px #b0c4de;  /* プルダウン枠線 */
+}
+.Left_Menu_Sub li {
+   padding: 5px!important;
+   text-align: left;
+   background: #ffffff;  /* リンク背景 */
+}
+.Left_Menu_Sub li:hover {
+   background: #b0c4de;  /* リンク背景 */
+}
+.Left_Menu_Sub li a {
+   display: inline-block;
+   text-decoration: none;
+   color: #333333;       /* リンク文字 */
+}
+
+.Left_Menu_Sub_2 {
+   display: none;
+   top: -1px;
+   font-weight: bold;
+   position: absolute;
+   background: #ffffff;        /* プルダウン背景 */
+   border: solid 1px #b0c4de;  /* プルダウン枠線 */
+}
+.Left_Menu_Sub_2 li {
+   padding: 5px!important;
+   text-align: left;
+   background: #ffffff;  /* リンク背景 */
+}
+.Left_Menu_Sub_2 li:hover {
+   background: #b0c4de;  /* リンク背景 */
+}
+.Left_Menu_Sub_2 li a {
+   display: inline-block;
+   text-decoration: none;
+   color: #333333;       /* リンク文字 */
+}
+
+
+
+/* AV・情報家電 */
+#menu_av {
+  width: 185px;
+}
+#menu_av li a {
+  width: 185px;
+}
+
+/* 液晶・プラズマテレビ */
+#menu_tv {
+  width: 135px;
+}
+#menu_tv li a {
+  width: 135px;
+}
+
+/* 季節家電 */
+#menu_season {
+  width: 165px;
+}
+#menu_season li a {
+  width: 165px;
+}
+
+/* 生活家電 */
+#menu_life {
+  width: 100px;
+}
+#menu_life li a {
+  width: 100px;
+}
+
+/* キッチン家電 */
+#menu_kitchen {
+  width: 150px;
+}
+#menu_kitchen li a {
+  width: 150px;
+}
+
+/* 美容・健康家電 */
+#menu_beauty_health {
+  width: 155px;
+}
+#menu_beauty_health li a {
+  width: 155px;
+}
+
+/* 住宅設備家電 */
+#menu_house_out {
+  width: 125px;
+}
+#menu_house_out li a {
+  width: 125px;
+}
+
+/* パソコン周辺機器 */
+#menu_pc {
+  width: 170px;
+}
+#menu_pc li a {
+  width: 170px;
+}
+
+/* ゴルフ用品 */
+#menu_golf {
+  width: 130px;
+}
+#menu_golf li a {
+  width: 130px;
+}
+#menu_golf_goods {
+  width: 135px;
+}
+#menu_golf_goods li a {
+  width: 135px;
+}
+#menu_golf_maker {
+  width: 120px;
+}
+#menu_golf_maker li a {
+  width: 120px;
+}
+
+/* その他 */
+#menu_other {
+  width: 126px;
+}
+#menu_other li a {
+  width: 126px;
+}
+
+
+/******ランキングの設定*******/
+#L_ranking {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#L_delivery_status {
+   margin-top: 10px;
+   margin-bottom: 20px;
+}

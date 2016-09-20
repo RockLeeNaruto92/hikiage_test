@@ -1,0 +1,31 @@
+<html>
+   <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script>
+
+   function pageShown(evt)
+   {
+
+   }
+
+   function pageHidden(evt)
+   {
+     localStorage.setItem("get_pagehide", get_pagehide());
+   }
+
+   function get_pagehide(){
+     var xhttp = new XMLHttpRequest();
+     xhttp.open("POST", "http://192.168.1.91:3000/api/v1/logs/navi_tag", false);
+     xhttp.send("scenario_uuid=test_scenario_uuid&company_uuid=test-company-uuid");
+     return xhttp.send("scenario_uuid=test_scenario_uuid&company_uuid=test-company-uuid");
+   }
+
+  //  window.addEventListener("pageshow", pageShown, false);
+  //  window.addEventListener("unload", pageHidden, false);
+   window.addEventListener("pagehide", pageHidden, false);
+
+   </script>
+   <body>
+   <a href="http://www.webkit.org/">Click for WebKit</a>
+   </body>
+   </html>
