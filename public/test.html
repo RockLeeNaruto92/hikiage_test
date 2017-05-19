@@ -1,0 +1,41 @@
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type='text/javascript'>
+    window.onAmazonLoginReady = function() {
+      amazon.Login.setClientId('amzn1.application-oa2-client.6a339767de8e43488a78fd93592e3f27');
+    };
+
+    window.onAmazonPaymentsReady = function(){
+      var authRequest;
+      OffAmazonPayments.Button("AmazonPayButton", "A3QCQLYZKBHFRS", {
+        type: "PwA",
+        color: "Gold",
+        size: "small",
+        hostedParametersProvider: function(done) {
+          $.getJSON('http://localhost:3000/home/signature', {
+            amount: 10,
+            currency_code: 'USD',
+            seller_note:'Testing Dynamic Express Amazon Payments'
+          }, function(data) {
+            done(data);
+            console.log(data);
+          })
+        },
+        onError: function(error) {
+          // your error handling code
+          alert("error");
+        }
+      });
+    }
+  </script>
+  <script async='async' type='text/javascript'
+    src='https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js'>
+  </script>
+</head>
+
+<body>
+  <div id="AmazonPayButton"/>
+
+  Test
+</body>

@@ -1,0 +1,30 @@
+[1] pry(main)> [1] pry(main)> [1] pry(main)> [1] pry(main)> [1] pry(main)> [1] pry(main)> [1] pry(main)> 
+[2] pry(main)> 
+[3] pry(main)> 
+[4] pry(main)> [4] pry(main)> [4] pry(main)> [4] pry(main)> [4] pry(main)> [4] pry(main)> [4] pry(main)> 
+[1mFrom:[0m /Users/BuiMinhThu/.rvm/gems/ruby-2.3.0@ukokkei/gems/global_phone_dbgen-1.0.0/bin/global_phone_dbgen @ line 57 :
+
+    [1;34m52[0m:     break
+    [1;34m53[0m:   end
+    [1;34m54[0m: end
+    [1;34m55[0m: 
+    [1;34m56[0m: 
+ => [1;34m57[0m: binding.pry
+    [1;34m58[0m: generator = GlobalPhone::DatabaseGenerator.load(open(path).read)
+    [1;34m59[0m: result = generator.send(method)
+    [1;34m60[0m: 
+    [1;34m61[0m: if compact
+    [1;34m62[0m:   puts JSON.generate(result)
+
+[0G
+
+
+
+
+
+
+
+
+
+
+

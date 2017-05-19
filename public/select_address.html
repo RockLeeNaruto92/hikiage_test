@@ -1,0 +1,52 @@
+<head>
+<style type="text/css">
+#addressBookWidgetDiv{width: 400px; height: 228px;}
+</style>
+<script>
+  window.onAmazonLoginReady = function() {
+    amazon.Login.setClientId('amzn1.application-oa2-client.6a339767de8e43488a78fd93592e3f27');
+  };
+
+  window.onAmazonPaymentsReady = function(){
+   new OffAmazonPayments.Widgets.AddressBook({
+     sellerId: 'A3QCQLYZKBHFRS',
+     agreementType: 'BillingAgreement',
+
+     onReady: function(billingAgreement) {
+       console.log(billingAgreement);
+       var billingAgreementId = billingAgreement.getAmazonBillingAgreementId();
+     },
+     onAddressSelect: function(billingAgreement) {
+       alert("onAddressSelect");
+       console.log(billingAgreement);
+       // Replace the following code with the action you that want to perform
+       // after the address is selected.
+       // The amazonBillingAgreementId can be used to retrieve
+       // the address details by calling the GetBillingAgreementDetails operation.
+       // If rendering the AddressBook and Wallet widgets on the same page, you
+       // should wait for this event before you render the Wallet widget for
+       // the first time.
+       // The Wallet widget will re-render itself on all subsequent
+       // onAddressSelect events, without any action from you. It is not
+       // recommended that you explicitly refresh it.
+     },
+     design: {
+       designMode: 'responsive'
+     },
+     onError: function(error) {
+     // your error handling code
+        console.log(error.getErrorCode());
+        console.log(error.getErrorMessage());
+        alert("Error");
+     }
+   }).bind("addressBookWidgetDiv");
+ }
+</script>
+<script async='async' type='text/javascript'
+  src='https://static-na.payments-amazon.com/OffAmazonPayments/us/sandbox/js/Widgets.js'>
+</script>
+</head>
+<body>
+  <div id="addressBookWidgetDiv">
+  </div>
+</body>

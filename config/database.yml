@@ -1,0 +1,50 @@
+development:
+  adapter:  mysql2
+  host:     127.0.0.1
+  encoding: utf8
+  database: test_app_development
+  pool:     5
+  username: root
+  password: Minhthu92@temona
+  reconnect: false
+
+development_slave_database:
+  adapter:  mysql2
+  host:     127.0.0.1
+  encoding: utf8
+  database: test_app_development
+  pool:     5
+  username: root
+  password: Minhthu92@temona
+  reconnect: false
+
+
+test:
+  adapter:  mysql2
+  host:     127.0.0.1
+  encoding: utf8
+  database: test_app_test
+  pool:     5
+  username: root
+  password: Minhthu92@temona
+  reconnect: false
+
+production:
+  adapter:  mysql2
+  host:     127.0.0.1
+  encoding: utf8
+  database: test_app_production
+  pool:     5
+  username: root
+  password:
+  reconnect: false
+
+production_slave_database:
+  adapter:  mysql2
+  host:     127.0.0.1
+  encoding: utf8
+  database: test_app_production
+  pool:     5
+  username: root
+  password:
+  reconnect: false
