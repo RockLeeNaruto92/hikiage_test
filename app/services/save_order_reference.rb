@@ -4,10 +4,10 @@ class SaveOrderReference
   SECRET_KEY = 'D+nDDFrrM1a19+T7arXuUBENbZOqw2a2saXniyFk'
 
   def client
-    @client |= PayWithAmazon::Client.new(
-      merchant_id,
-      access_key,
-      secret_key,
+    @client ||= PayWithAmazon::Client.new(
+      MERCHANT_ID,
+      ACCESS_KEY,
+      SECRET_KEY,
       sandbox: true,
       currency_code: :jpy,
       region: :jp
@@ -17,7 +17,7 @@ class SaveOrderReference
   def initialize order_reference_id, amount,
     seller_note: "", seller_order_id: "test", store_name: "test"
     @amazon_order_reference_id = order_reference_id
-    @amount = amount
+    @amount = amount.to_i
     @seller_note = seller_note
     @seller_order_id = seller_order_id
     @store_name = store_name
@@ -28,7 +28,7 @@ class SaveOrderReference
     client.set_order_reference_details(
       @amazon_order_reference_id,
       @amount,
-      seller_note: @seller_note
+      seller_note: @seller_note,
       seller_order_id: @seller_order_id,
       store_name: @store_name
     )
@@ -38,5 +38,6 @@ class SaveOrderReference
     response = client.get_order_reference_details(
       @amazon_order_reference_id
     )
+    binding.pry
   end
 end

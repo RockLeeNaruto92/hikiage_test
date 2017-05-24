@@ -25,18 +25,28 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-    binding.pry
-    SaveOrderReference.new()
+    @order.save
+    order_referece = OrderReferenceDetail.create amazon_order_reference_id: params[:order][:order_reference_id],
+      order: @order, status: "Open"
+    SaveOrderReference.new(params[:order][:order_reference_id], params[:order][:total]).call
 
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
+    format.html { redirect_to @order, notice: 'Order was successfully created.' }
+  end
+
+  def authorize
+
+  end
+
+  def capture
+
+  end
+
+  def refund
+
+  end
+
+  def ipn_process
+    binding.pry
   end
 
   # PATCH/PUT /orders/1
