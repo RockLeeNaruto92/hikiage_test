@@ -27,7 +27,7 @@
     if (access_token) {
       new OffAmazonPayments.Widgets.AddressBook({
           sellerId: 'A3QCQLYZKBHFRS',
-          scope: 'payments:shipping_address',
+          scope: 'profile payments:widget payments:shipping_address',
           sandbox: 'true',
           onOrderReferenceCreate: function(orderReference) {
             // Here is where you can grab the Order Reference ID.
@@ -111,7 +111,7 @@
         size: "small",
         authorization: function() {
           loginOptions =
-          {scope: "profile payments:widget", popup: "true", sandbox: "true"};
+          {scope: "profile payments:widget payments:shipping_address", popup: "true", sandbox: "true"};
           authRequest = amazon.Login.authorize (loginOptions,
           "http://localhost:3000/orders/new");
         },

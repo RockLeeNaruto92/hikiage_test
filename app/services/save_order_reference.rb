@@ -14,10 +14,12 @@ class SaveOrderReference
     )
   end
 
-  def initialize order_reference_id, amount,
+
+  def initialize order_reference_id, amount, access_key: nil,
     seller_note: "", seller_order_id: "test", store_name: "test"
     @amazon_order_reference_id = order_reference_id
     @amount = amount.to_i
+    @access_key = access_key
     @seller_note = seller_note
     @seller_order_id = seller_order_id
     @store_name = store_name

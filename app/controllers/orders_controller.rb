@@ -28,7 +28,10 @@ class OrdersController < ApplicationController
     @order.save
     order_referece = OrderReferenceDetail.create amazon_order_reference_id: params[:order][:order_reference_id],
       order: @order, status: "Open"
-    SaveOrderReference.new(params[:order][:order_reference_id], params[:order][:total]).call
+    SaveOrderReference.new(
+      params[:order][:order_reference_id], params[:order][:total],
+      access_key: params[:order][:access_token]
+    ).call
 
     format.html { redirect_to @order, notice: 'Order was successfully created.' }
   end
