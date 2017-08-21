@@ -49,7 +49,6 @@ class Amazon::CreateAuthorizeOrderReference
     UkokkeiCore::Utility.log_exception e,
       info: "Called CreateAuthorizeOrderReference.call with #{order.inspect} and #{amazon_order_reference}"
     result = ServiceResult.new success: false, errors: [e]
-    binding.pry
     result
   end
 end

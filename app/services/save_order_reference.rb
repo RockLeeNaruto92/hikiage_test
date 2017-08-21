@@ -1,10 +1,10 @@
 class SaveOrderReference
-  MERCHANT_ID = 'A3QCQLYZKBHFRS'
-  ACCESS_KEY = 'AKIAJ7QFPDNE5WCULPAQ'
-  SECRET_KEY = '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'
+  MERCHANT_ID = 'MERCHANT_ID'
+  ACCESS_KEY = 'ACCESS_KEY'
+  SECRET_KEY = 'SECRET_KEY'
 
   def client
-    @client ||= PayWithAmazon::Client.new(
+    @client ||= AmazonPay::Client.new(
       MERCHANT_ID,
       ACCESS_KEY,
       SECRET_KEY,
@@ -34,7 +34,7 @@ class SaveOrderReference
       seller_order_id: @seller_order_id,
       store_name: @store_name
     )
-    binding.pry
+
     client.confirm_order_reference(@amazon_order_reference_id)
     binding.pry
     response = client.get_order_reference_details(
